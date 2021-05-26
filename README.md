@@ -1,3 +1,3 @@
 # DaMemer
 
-This is a Discord bot for a discord server with me and friends!!!
+This is a stupid Discord bot for a server with me and friends!!!
