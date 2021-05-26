@@ -1,4 +1,4 @@
 # This is git ignore file for DaMemer discord bot.
 
 node_modules/
-.TOKEN
+.TOKEN.txt
