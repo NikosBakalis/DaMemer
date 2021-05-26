@@ -35,6 +35,12 @@ client.on('message', msg => {
     });
 });
 
+client.on('typingStart', msg => {
+    if(probability(5)) {
+        msg.send('ΕΛΑ, ΠΕΣ ΤΗ ΜΑΛΑΚΙΑ ΣΟΥ! 👍');
+    }
+});
+
 function probability(x) {
     num = Math.floor(Math.random() * 100) + 1;
     if(num <= x) {
