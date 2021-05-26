@@ -20,16 +20,16 @@ client.on('message', msg => {
     if(probability(1)) {
         msg.reply('ΜΑΛΑΚΑ ΒΟΥΛΩΝΕ 👌');
     }
-    if(msg.content === 'ping' && probability(100)) {
+    if(msg.content === 'ping') {
       msg.reply('pong');
     }
     lineReader.eachLine(FILE_LOCATION_EGW, function(line) {
-        if(msg.content.includes(line) && probability(20)) {
+        if(msg.content.includes(line) && probability(40)) {
             msg.reply('ΚΑΛΑ ΕΣΥ!');
         }
     });
     lineReader.eachLine(FILE_LOCATION_ELA, function(line) {
-        if(msg.content.includes(line) && probability(10)) {
+        if(msg.content.includes(line) && probability(30)) {
             msg.reply('ΚΑΡΒΕΛΑ 🤣🤣');
         }
     });
