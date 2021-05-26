@@ -1,4 +1,5 @@
 FILE_LOCATION_EGW = 'word_texts/Egw.txt';
+FILE_LOCATION_ELA = 'word_texts/Ela.txt';
 
 const Discord = require('discord.js');
 const lineReader = require('line-reader');
@@ -21,6 +22,11 @@ client.on('message', msg => {
     lineReader.eachLine(FILE_LOCATION_EGW, function(line) {
         if(msg.content.includes(line) && probability(20)) {
             msg.reply('ΚΑΛΑ ΕΣΥ!');
+        }
+    });
+    lineReader.eachLine(FILE_LOCATION_ELA, function(line) {
+        if(msg.content.includes(line) && probability(10)) {
+            msg.reply('ΚΑΡΒΕΛΑ 🤣🤣');
         }
     });
 });
