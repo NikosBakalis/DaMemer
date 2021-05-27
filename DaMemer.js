@@ -19,6 +19,12 @@ client.on('message', msg => {
     if(msg.content === 'ping') {
         msg.reply('pong');
     }
+    if(msg.content === 'pong') {
+        msg.reply('Τράβα και γαμήσου που θα σου έλεγα και ping, ΜΑΛΑΚΑ, Ε ΜΑΛΑΚΑ!');
+    }
+    if(msg.author == '247438475257839617' && probability(25)){
+        msg.reply('ΚΟΥΛΗΣ Ο ΜΠΑΜΠΑΣ ΜΑΣ ΡΕ ΜΟΥΝΙΑ!!! 😎😎😎')
+    }
     lineReader.eachLine(FILE_LOCATION_EGW, function(line) {
         if(msg.content.includes(line) && probability(40)) {
             msg.reply('ΚΑΛΑ ΕΣΥ!');
@@ -32,7 +38,7 @@ client.on('message', msg => {
 });
 
 client.on('typingStart', (channel, user) => {
-    if(probability(5)) {
+    if(probability(10)) {
         channel.send('ΕΛΑ, ΠΕΣ ΤΗ ΜΑΛΑΚΙΑ ΣΟΥ! 👍');
     }
     if(probability(35) && user.id === '359676358671990786') {
@@ -50,7 +56,7 @@ client.on('voiceStateUpdate', (oldState, newState) => {
         // User Joins a voice channel
         channel.send("ΒΡΕ ΚΑΛΩΣ ΤΟ ΜΑΛΑΚΑ!");
     }
-    else if(probability(20)){
+    else if(oldUserState === '706241218501410856' && probability(20)){
         // User leaves a voice channel
         channel.send("ΕΛΑ ΕΛΑ ΠΟΛΥ ΣΕ ΑΚΟΥΣΑΜΕ!");
     }
