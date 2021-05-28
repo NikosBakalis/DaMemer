@@ -22,8 +22,17 @@ client.on('message', msg => {
     if(msg.content === 'pong') {
         msg.reply('Τράβα και γαμήσου που θα σου έλεγα και ping, ΜΑΛΑΚΑ, Ε ΜΑΛΑΚΑ!');
     }
-    if(msg.author == '247438475257839617' && probability(25)){
-        msg.reply('ΚΟΥΛΗΣ Ο ΜΠΑΜΠΑΣ ΜΑΣ ΡΕ ΜΟΥΝΙΑ!!! 😎😎😎')
+    if(msg.content === 'Τι είναι ο Ηλίας;') {
+        msg.reply('Μολδαβός!!!');
+    }
+    if(msg.author == '504697663120211969' && probability(10)){
+        msg.reply('Ο ΜΠΑΜΠΑΣ ΜΑΣ ΡΕ ΜΟΥΝΙΑ!!! 😎😎😎');
+    }
+    if(msg.author == '652886697280929823' && probability(10)){
+        msg.reply('είσαι noob, το λέει ο Κούλης');
+    }
+    if(msg.author == '358688522896670720' && probability(5)){
+        msg.reply('SHEEEEEEEEEEEEESH');
     }
     lineReader.eachLine(FILE_LOCATION_EGW, function(line) {
         if(msg.content.includes(line) && probability(40)) {
@@ -31,7 +40,7 @@ client.on('message', msg => {
         }
     });
     lineReader.eachLine(FILE_LOCATION_ELA, function(line) {
-        if(msg.content.includes(line) && probability(30)) {
+        if(msg.content.includes(line) && probability(10)) {
             msg.reply('ΚΑΡΒΕΛΑ 🤣🤣');
         }
     });
@@ -51,12 +60,12 @@ client.on('voiceStateUpdate', (oldState, newState) => {
     let oldUserState = oldState.channelID;
     let channel = client.channels.cache.find(channel => channel.id === '401499524704763907');
 
-    if(newUserState === '706241218501410856' && probability(30))
+    if(newUserState === '706241218501410856' && probability(5))
     { 
         // User Joins a voice channel
         channel.send("ΒΡΕ ΚΑΛΩΣ ΤΟ ΜΑΛΑΚΑ!");
     }
-    else if(oldUserState === '706241218501410856' && probability(20)){
+    else if(oldUserState === '706241218501410856' && probability(5)){
         // User leaves a voice channel
         channel.send("ΕΛΑ ΕΛΑ ΠΟΛΥ ΣΕ ΑΚΟΥΣΑΜΕ!");
     }
