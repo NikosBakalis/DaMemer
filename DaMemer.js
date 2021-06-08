@@ -40,7 +40,7 @@ client.on('message', msg => {
         }
     });
     lineReader.eachLine(FILE_LOCATION_ELA, function(line) {
-        if(msg.content.includes(line) && probability(10)) {
+        if(msg.content.includes(line) && probability(1)) {
             msg.reply('ΚΑΡΒΕΛΑ 🤣🤣');
         }
     });
