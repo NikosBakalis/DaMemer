@@ -47,11 +47,11 @@ client.on('message', msg => {
 });
 
 client.on('typingStart', (channel, user) => {
-    if(probability(10)) {
-        channel.send('ΕΛΑ, ΠΕΣ ΤΗ ΜΑΛΑΚΙΑ ΣΟΥ! 👍');
-    }
     if(probability(35) && user.id === '359676358671990786') {
         channel.send('ΩΩΩΧ ΘΑ ΜΙΛΗΣΕΙ Ο ΜΟΛΔΑΒΟΣ!!! 🤣🤣🤣');
+    }
+    if(probability(10)) {
+        channel.send('ΕΛΑ, ΠΕΣ ΤΗ ΜΑΛΑΚΙΑ ΣΟΥ! 👍');
     }
 });
 
